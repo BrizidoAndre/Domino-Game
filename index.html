@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dominó</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="form-control">
+        <input type="checkbox" id="dark-theme">
+        <label for="dark-theme">Tema escuro?</label>
+    </div>
+    <div class="show-turn">
+        <p>
+            Vez:
+            <span id="turn">
+            Você
+            </span>
+        </p>
+    </div>
+</header>
+
+<main>
+    <section class="board d-none">
+        <div class="points player-points">
+            Você: <span id="player-points">0</span>
+        </div>
+        <div class="points computer-points">
+            Computador: <span id="computer-points">0</span>
+        </div>
+        <div class="player-space computer">
+        </div>
+        <div class="game-space">
+
+        </div>
+        <div class="player-space player">
+        </div>
+        <div class="container-buy">
+            <p>Peças faltando: <span id="buy-left">14</span></p>
+            <div class="block-hidden" id='block-buy'></div>
+        </div>
+        <div class="container-win d-none">
+            <p>
+                Vencedor: <span id="win-indicator"></span>
+                Pontos: <span id="points-indicator"></span>
+            </p>
+            <button class="btn btn-success" id="btn-restart">Restart</button>
+        </div>
+    </section>
+    <section class="modal">
+        <button class="btn btn-success" id="btn-start">Iniciar</button>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

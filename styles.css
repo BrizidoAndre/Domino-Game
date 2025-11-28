@@ -1,0 +1,141 @@
+:root {
+    --light: #fafafa;
+    --dark: #282828;
+}
+
+.dark {
+    --light: #282828;
+    --dark: #fafafa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--dark);
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    background: var(--light);
+}
+
+.d-none {
+    display: none !important;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid var(--dark);
+}
+
+.board {
+    border: 1px solid var(--dark);
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+}
+
+.player-space {
+    height: 200px;
+    border: 1px solid var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: scroll;
+}
+.player-space.computer{
+    padding-left: 80px;
+}
+
+.block {
+    width: 80px;
+    height: 150px;
+    cursor: pointer;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.block-hidden {
+    width: 80px;
+    height: 150px;
+    border-radius: 12px;
+    border: 3px solid var(--dark);
+}
+#block-buy{
+    cursor: pointer;
+}
+
+.game-space {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+button {
+    background: var(--light);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    border-radius: 8px;
+    background: var(--light);
+}
+
+.container-win {
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-buy {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--light);
+    padding: 20px;
+}
+
+.rotate-180 {
+    rotate: 180deg;
+}
+
+.points{
+    position: absolute;
+    top: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--light);
+}
+.player-points{
+    left: -20px;
+}
+
+.computer-points{
+    right: -20px;
+}
